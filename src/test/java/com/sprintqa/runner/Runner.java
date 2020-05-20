@@ -7,9 +7,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-					features = "src\\test\\resources\\feature\\Demo.feature", 
+					features = "src\\test\\resources\\feature", 
 					glue = "com.sprintqa.stepDef", 
 					monochrome = true,
+					tags = {"@complete"},
 					plugin = {"json:target/cucumber.json", "junit:target/cucumber.xml"}
 				)
 public class Runner {

@@ -29,7 +29,7 @@ public class BaseClass {
 		webDriver = new ChromeDriver();
 
 		// Set our timeouts
-		webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Set window size
 		webDriver.manage().window().maximize();

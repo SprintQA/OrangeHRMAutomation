@@ -8,13 +8,13 @@ Feature: Login functionality tests
     Given user open the website
     Then verify login page is displayed
 
-  @positive @smoke @wip @kamil
+  @positive @smoke
   Scenario: Verify login successful with valid cred
     When user login with username "valid.username" and password "valid.password"
-    Then verify user is on homepage
+    Then verify login is successful
 
-  @negative @regression @chirag
+  @negative @smoke
   Scenario: Verify login unsuccessful with invalid cred
-    When user login with username "124543" and password "564321"
+    When user login with username "invalid.username" and password "invalid.password"
     Then verify login is unsuccessful
     Then verify login page is displayed
