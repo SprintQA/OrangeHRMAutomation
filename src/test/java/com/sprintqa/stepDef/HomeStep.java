@@ -39,5 +39,10 @@ public class HomeStep extends BaseClass {
 		List<String> listOfSubMenu = data.asList(String.class);
 		homePage.verifyJobSubMenu(listOfSubMenu);
 	}
+	
+	@When("^user hover mouse on PIM menu$")
+	public void user_hover_mouse_on_PIM_menu() throws Throwable {
+	  
+	}
 
 }
