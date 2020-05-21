@@ -36,6 +36,9 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//a[@id='menu_admin_Job']/../ul/li/a")
 	public List<WebElement> listOfJobSubMenuEle;
 
+	@FindBy(id = "menu_pim_addEmployee")
+	public WebElement addEmployeeMenu;
+
 	public HomePage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
 	}
@@ -69,6 +72,14 @@ public class HomePage extends CommonMethods {
 			Assert.assertTrue("Jobs sub menu text is not correct",
 					listOfJobSubMenuEle.get(i).getText().equalsIgnoreCase(listOfSubMenu.get(i)));
 		}
+	}
+
+	public void hoverMouseOnPIMMenu() {
+		hoverMouseToElement(pimMenu);
+	}
+
+	public void clickOnAddEmployeeMenu() {
+		addEmployeeMenu.click();
 	}
 
 }
