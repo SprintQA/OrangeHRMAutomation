@@ -10,9 +10,11 @@ import cucumber.api.junit.Cucumber;
 					features = "src\\test\\resources\\feature", 
 					glue = "com.sprintqa.stepDef", 
 					monochrome = true,
-					tags = {"@complete"},
+					tags = {"@123"},
 					plugin = {"json:target/cucumber.json", "junit:target/cucumber.xml"}
 				)
 public class Runner {
 
 }
+
+

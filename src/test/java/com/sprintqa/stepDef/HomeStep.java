@@ -41,7 +41,16 @@ public class HomeStep extends BaseClass {
 	}
 
 	
-	
+	@When("^user hover mouse on PIM menu$")
+	public void user_hover_mouse_on_PIM_menu() throws Throwable {
+		homePage.MoveToPim();
+		
+	}
+
+	@When("^click on Add Employee menu$")
+	public void click_on_Add_Employee_menu() throws Throwable {
+		homePage.addEmployee.click();
+	}
 
 
 	

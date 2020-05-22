@@ -36,6 +36,10 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//a[@id='menu_admin_Job']/../ul/li/a")
 	public List<WebElement> listOfJobSubMenuEle;
 	
+	
+	@FindBy(xpath = "//a[@id ='menu_pim_addEmployee']")
+	public WebElement addEmployee;
+	
 	public HomePage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
 	}
@@ -63,6 +67,10 @@ public class HomePage extends CommonMethods {
 		hoverMouseToElement(jobMenu);
 	}
 
+	public void  MoveToPim() {
+		hoverMouseToElement(pimMenu);
+	}
+	
 	public void verifyJobSubMenu(List<String> listOfSubMenu) {
 		for (int i = 0; i < listOfJobSubMenuEle.size(); i++) {
 			Assert.assertTrue("Jobs sub menu are not displayed", listOfJobSubMenuEle.get(i).isDisplayed());
