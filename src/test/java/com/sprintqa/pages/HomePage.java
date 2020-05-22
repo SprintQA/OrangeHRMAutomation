@@ -38,6 +38,12 @@ public class HomePage extends CommonMethods {
 
 	@FindBy(id = "menu_pim_addEmployee")
 	public WebElement addEmployeeMenu;
+	
+	@FindBy(id="menu_recruitment_viewRecruitmentModule")
+	public WebElement recruimentTab;
+	
+	@FindBy(id="menu_recruitment_viewJobVacancy")
+	public WebElement vacanciesMenu;
 
 	public HomePage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
@@ -80,6 +86,14 @@ public class HomePage extends CommonMethods {
 
 	public void clickOnAddEmployeeMenu() {
 		addEmployeeMenu.click();
+	}
+
+	public void hoverMouseOnRecruitmentMenu() {
+		hoverMouseToElement(recruimentTab);
+	}
+
+	public void clickOnVacanciesMenu() {
+		vacanciesMenu.click();
 	}
 
 }

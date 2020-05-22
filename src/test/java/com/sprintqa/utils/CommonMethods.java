@@ -120,10 +120,23 @@ public class CommonMethods extends BaseClass {
 		WebDriverWait wait = new WebDriverWait(getWebDriver(), 30);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
+	public void waitForElementToClickable(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(getWebDriver(), 30);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+
 	public void hoverMouseToElement(WebElement element) {
 		Actions action = new Actions(getWebDriver());
 		action.moveToElement(element).build().perform();
+	}
+
+	public boolean isElementDisplayed(WebElement element) {
+		try {
+			return element.isDisplayed();
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 }

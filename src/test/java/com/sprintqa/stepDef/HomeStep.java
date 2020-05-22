@@ -49,5 +49,16 @@ public class HomeStep extends BaseClass {
 	public void click_on_Add_Employee_menu() throws Throwable {
 		homePage.clickOnAddEmployeeMenu();
 	}
+	
+	@When("^user hover mouse on Recruitment menu$")
+	public void user_hover_mouse_on_Recruitment_menu() throws Throwable {
+		homePage.hoverMouseOnRecruitmentMenu();
+	}
+
+	@When("^user click on Vacancies menu$")
+	public void user_click_on_Vacancies_menu() throws Throwable {
+		homePage.clickOnVacanciesMenu();
+	}
+
 
 }

@@ -6,7 +6,7 @@ Feature: Verify add employee functionality
     When user login with username "valid.username" and password "valid.password"
     Then verify login is successful
 
-	@wip
+	@regression
   Scenario: Verify admin user can add employee
     When user hover mouse on PIM menu
     And click on Add Employee menu

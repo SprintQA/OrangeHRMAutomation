@@ -6,13 +6,13 @@ Feature: Verify objects and drop down on homepage
     When user login with username "valid.username" and password "valid.password"
     Then verify login is successful
 
-	@complete
+	@regression
   Scenario: Verify user management drop down menus
     When user hover mouse on admin menu
     And hover mouse on user management menu
     Then verify user is displayed with "users" menu
 
-  @complete
+  @regression
   Scenario: Verify job drop down menus
     When user hover mouse on admin menu
     And hover mouse on jobs menu
